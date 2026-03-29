@@ -9,7 +9,7 @@ public class NumberGuessingGame {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-        final int MIN = 1;       // Minimum possible number
+        final int MIN = 0;       // Minimum possible number
         final int MAX = 100;     // Maximum possible number
 
         int targetNumber = random.nextInt(MAX - MIN + 1) + MIN;
@@ -47,11 +47,6 @@ public class NumberGuessingGame {
                 scanner.next(); // Clear invalid input
             }
         }
-
-        if (!guessedCorrectly) {
-            System.out.println("❌ Sorry! You've used all attempts. The number was: " + targetNumber);
-        }
-
         scanner.close();
     }
 }
