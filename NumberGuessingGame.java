@@ -8,15 +8,19 @@ public class NumberGuessingGame {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-
-        final int MIN = 0;       // Minimum possible number
-        final int MAX = 100;     // Maximum possible number
-
-        int targetNumber = random.nextInt(MAX - MIN + 1) + MIN;
+        
         int attempts = 0;
         boolean guessedCorrectly = false;
 
         System.out.println("=== Welcome to the Number Guessing Game ===");
+        System.out.println("Pick A Difficulty");
+        String difficulty = scanner.nextLine(); // Read the entire line of word input
+        if (difficulty == 'Easy' ) {
+            int MIN = 0;       // Minimum possible number
+            int MAX = 10;     // Maximum possible number
+        }
+
+        int targetNumber = random.nextInt(MAX - MIN + 1) + MIN;
         System.out.println("I have chosen a number between " + MIN + " and " + MAX + ".");
 
         while (!guessedCorrectly) {
