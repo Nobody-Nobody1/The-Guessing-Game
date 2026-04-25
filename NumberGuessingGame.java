@@ -13,7 +13,7 @@ public class NumberGuessingGame {
         boolean guessedCorrectly = false;
 
         int MIN = 0;       // Minimum possible number
-        int MAX = 10;     // Maximum possible number
+        int MAX = 100;     // Maximum possible number
 
         System.out.println("=== Welcome to the Number Guessing Game ===");
         
